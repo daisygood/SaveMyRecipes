@@ -5,7 +5,7 @@ services.factory('Recipes', function ($http) {
     return $http({
       method:'GET',
       url:'/api/recipes'
-    });
+    })
     .then(function (resp) {
       console.log(resp);
       return resp;

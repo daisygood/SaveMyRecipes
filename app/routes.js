@@ -1,4 +1,5 @@
 var Recipe = require('./models/recipe');
+var request = require('request');
 
 var handleGet = function (req, res) {
   Recipe.find({})
@@ -13,11 +14,11 @@ var handleGet = function (req, res) {
 var handlePost = function (req, res) {
   var title = req.body.title;
   var details = req.body.details;
-  Recipe.create({
+  var newRecipe = new Recipe({
     title: title,
     details: details
-  })
-  .then(function (newRecipe) {
+  });
+  newRecipe.save().then(function (newRecipe) {
     res.send(201, newRecipe);
   })
   .catch(function (err) {

@@ -1,0 +1,1 @@
+var recipes = angular.module('Recipe.recipes', []);

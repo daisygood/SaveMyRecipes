@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html ng-app='shortly'>
+<html ng-app='Recipe'>
   <head>
     <meta charset="utf-8" />
     <title>Save My recipes</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"/> -->
   </head>
   <body>
 
+    <nav class="navbar navbar-default" ng-controller='RecipeController'>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class='navbar-brand'>Save My Recipes</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: isActive('/allrecipes')}" ><a href="#/allrecipes">All Recipes</a></li>
+          <li ng-class="{active: isActive('/add')}" ><a href="#/add">Add Recipe</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <div ng-view></div>
 
