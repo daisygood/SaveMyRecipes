@@ -18,6 +18,10 @@
   "bugs": {
     "url": "https://github.com/daisygood/SaveMyRecipes/issues"
   },
+  "engines": {
+    "node": "6.6.0"
+  },
+
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
