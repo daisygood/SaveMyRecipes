@@ -1,0 +1,17 @@
+{
+  "name": "save-my-recipes",
+  "version": "1.0.0",
+  "authors": "Daisy Good",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+    "angular-mocks": "~1.3.16"
+  }
+}
