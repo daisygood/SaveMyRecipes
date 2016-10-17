@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var app = express();
 var port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/saveMyRecipes');
+mongoose.connect('mongodb://heroku_qc5w98g4:o8mr2al2qkokqvdjadg5dihfmu@ds029486.mlab.com:29486/heroku_qc5w98g4');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
