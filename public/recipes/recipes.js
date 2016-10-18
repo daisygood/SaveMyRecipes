@@ -9,6 +9,12 @@ recipes.controller('ReceipesController', function ($scope, Recipes) {
     });
   };
 
+  $scope.delete = function (id) {
+    Recipes.deleteOne(id).then(function (data) {
+      getAllRecipes();
+    });
+  };
+
   getAllRecipes();
 
 });

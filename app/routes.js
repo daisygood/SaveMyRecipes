@@ -26,10 +26,21 @@ var handlePost = function (req, res) {
   .catch(function (err) {
     res.send(err);
   })
+};
+
+var handleDelete = function (req, res) {
+
+  console.log(req.params.recipe_id);
+  Recipe.remove({
+    _id: req.params.recipe_id
+  }).then(function (recipe) {
+    res.send(201);
+  })
 }
 
 module.exports = function (app) {
   app.get('/api/recipes', handleGet);
   app.post('/api/recipes', handlePost);
+  app.delete('/api/recipes/:recipe_id', handleDelete);
 };
 

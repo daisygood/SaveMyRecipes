@@ -19,9 +19,18 @@ services.factory('Recipes', function ($http) {
     });
   };
 
+  var deleteOne = function (id) {
+    return $http({
+      method: 'DELETE',
+      url:'/api/recipes/' + id,
+      data: id
+    });
+  };
+
   return {
     retrieveAll: retrieveAll,
-    addMore: addMore
+    addMore: addMore,
+    deleteOne: deleteOne
   }
 
 })

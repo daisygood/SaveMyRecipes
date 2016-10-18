@@ -3,6 +3,7 @@ var partials = require('express-partials');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
+var methodOverride = require('method-override');
 
 var app = express();
 var port = process.env.PORT || 5000;

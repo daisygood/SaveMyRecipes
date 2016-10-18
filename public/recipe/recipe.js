@@ -12,6 +12,7 @@ recipeDetails.controller('RecipeDetailsController', function ($scope, $statePara
     }
   }
 
+
   findCurrentRecipe();
 
 });
