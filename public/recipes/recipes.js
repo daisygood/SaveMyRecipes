@@ -8,6 +8,7 @@ recipes.controller('ReceipesController', function ($scope, Recipes) {
       $scope.recipes = data.data;
     });
   };
+
   getAllRecipes();
 
 });

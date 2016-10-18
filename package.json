@@ -21,7 +21,6 @@
   "engines": {
     "node": "6.6.0"
   },
-
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
@@ -31,6 +30,7 @@
     "express-partials": "^0.3.0",
     "mongoose": "^4.4.10",
     "morgan": "~1.2.2",
-    "request": "^2.75.0"
+    "request": "^2.75.0",
+    "ui-router": "^1.0.0-alpha.3"
   }
 }

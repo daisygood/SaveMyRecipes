@@ -14,16 +14,16 @@
           <a class='navbar-brand'>Save My Recipes</a>
         </div>
         <ul class="nav navbar-nav">
-          <li ng-class="{active: isActive('/allrecipes')}" ><a href="#/allrecipes">All Recipes</a></li>
-          <li ng-class="{active: isActive('/add')}" ><a href="#/add">Add Recipe</a></li>
+          <li ng-class="{active: isActive('/allrecipes')}" ><a ui-sref="allrecipes">All Recipes</a></li>
+          <li ng-class="{active: isActive('/add')}" ><a ui-sref="add">Add Recipe</a></li>
         </ul>
       </div>
     </nav>
 
-    <div ng-view></div>
+    <div ui-view></div>
 
     <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="addNew/addNew.js"></script>
     <script src="recipes/recipes.js"></script>
     <script src="services.js"></script>

@@ -2,22 +2,25 @@ var recipe = angular.module('Recipe', [
   'Recipe.services',
   'Recipe.addNew',
   'Recipe.recipes',
-  'ngRoute'
+  'ui.router'
 ]);
 
-recipe.config(function ($routeProvider) {
-  $routeProvider
-    .when('/add', {
+recipe.config(function ($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/add');
+
+  $stateProvider
+    .state('add', {
+      url: '/add',
       templateUrl: 'addNew/addNew.html',
       controller: 'addController'
     })
-    .when('/allrecipes', {
+    .state('allrecipes', {
+      url: '/allrecipes',
       templateUrl: 'recipes/recipes.html',
       controller: 'ReceipesController'
     })
-    .otherwise({
-      redirectTo: '/add'
-    })
+
 });
 
 recipe.controller('RecipeController', function ($scope, $location) {
