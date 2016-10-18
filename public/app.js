@@ -12,7 +12,8 @@ recipe.config(function ($routeProvider) {
       controller: 'addController'
     })
     .when('/allrecipes', {
-      templateUrl: 'recipes/recipes.html'
+      templateUrl: 'recipes/recipes.html',
+      controller: 'ReceipesController'
     })
     .otherwise({
       redirectTo: '/add'

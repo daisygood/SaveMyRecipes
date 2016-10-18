@@ -1,14 +1,14 @@
 var services = angular.module('Recipe.services', []);
 
 services.factory('Recipes', function ($http) {
-  var retrieveAll = function () {
+  var retrieveAll = function (callback) {
     return $http({
       method:'GET',
       url:'/api/recipes'
     })
     .then(function (resp) {
       console.log(resp);
-      return resp;
+      callback(resp);
     })
   };
 

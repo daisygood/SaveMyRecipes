@@ -1,1 +1,19 @@
-<h1>Recipes</h1>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" >
+        <ul class="list-group nav" >
+          <li class="list-group-item" ng-repeat='recipe in recipes | orderBy:"-date" | limitTo: "8"'>
+            <a href="#">{{ recipe.title }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"></h3>
+          </div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+    </div>
+</div>
