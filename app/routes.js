@@ -13,10 +13,12 @@ var handleGet = function (req, res) {
 
 var handlePost = function (req, res) {
   var title = req.body.title;
-  var details = req.body.details;
+  var ingredients = req.body.ingredients;
+  var directions = req.body.directions;
   var newRecipe = new Recipe({
     title: title,
-    details: details
+    ingredients: ingredients,
+    directions: directions
   });
   newRecipe.save().then(function (newRecipe) {
     res.send(201, newRecipe);

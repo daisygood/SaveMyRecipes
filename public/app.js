@@ -2,6 +2,7 @@ var recipe = angular.module('Recipe', [
   'Recipe.services',
   'Recipe.addNew',
   'Recipe.recipes',
+  'Recipe.recipe',
   'ui.router'
 ]);
 
@@ -20,11 +21,15 @@ recipe.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'recipes/recipes.html',
       controller: 'ReceipesController'
     })
-
+    .state('allrecipes.recipe', {
+      url:'/{recipeId}',
+      templateUrl: 'recipe/recipe.html',
+      controller: 'RecipeDetailsController',
+    })
 });
 
 recipe.controller('RecipeController', function ($scope, $location) {
   $scope.isActive = function (location) {
-     return location === $location.path();
+     return $location.path().indexOf(location) > -1;
   };
 })

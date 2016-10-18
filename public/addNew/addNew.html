@@ -1,13 +1,13 @@
 <div class="container">
   <div class='row'>
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
       <div class="alert alert-success" ng-show="submissionSuccess">
         <strong>We have successfully saved your new recipe</strong>
       </div>
     </div>
   </div>
   <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         <div class="well well-sm">
           <form class="form-horizontal" action="">
           <fieldset>
@@ -21,15 +21,22 @@
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label" for="details">Details</label>
+              <label class="col-md-2 control-label" for="ingredients">Ingredients</label>
               <div class="col-md-9">
-                <textarea class="form-control" id="details" name="details" rows="10" ng-model="data.details"></textarea>
+                <textarea class="form-control" id="ingredients" name="ingredients" rows="9" ng-model="data.ingredients"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="directions">Directions</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="directions" name="directions" rows="10" ng-model="data.directions"></textarea>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-11 text-right">
-                <button type="submit" class="btn btn-primary btn-lg" ng-click='add()'>Submit</button>
+                <button type="submit" class="btn btn-secondary btn-lg" ng-click='add()'>Submit</button>
               </div>
             </div>
           </fieldset>

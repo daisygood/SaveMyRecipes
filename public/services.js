@@ -7,7 +7,6 @@ services.factory('Recipes', function ($http) {
       url:'/api/recipes'
     })
     .then(function (resp) {
-      console.log(resp);
       callback(resp);
     })
   };
@@ -18,7 +17,7 @@ services.factory('Recipes', function ($http) {
       url:'/api/recipes',
       data: data
     });
-  }
+  };
 
   return {
     retrieveAll: retrieveAll,
