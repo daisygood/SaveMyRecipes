@@ -1,5 +1,9 @@
 <!-- <div id="custom-search-input" ng-controller = "searchController">
-
+  <div class="row">
+    <div class = "col-md-8 col-md-offset-2">
+      <label>What are you in the mood for?</label>
+    </div>
+  </div>
   <div class="row">
     <div class="input-group col-md-8 col-md-offset-2">
         <input type="text" class="form-control input-lg" placeholder="Enter keyword to search from your recipes" ng-model="keyword" required/>
@@ -13,17 +17,14 @@
 </div>
  -->
 
-
-<div class="container" id="all">
-    <div class="row">
-      <div class="col-md-4" >
-        <ul class="list-group nav" >
-          <div class="list-group-item" ng-repeat='recipe in recipes | orderBy:"-date" | filter: keyword'>
-            <a ui-sref-active="active" ui-sref="allrecipes.recipe({ recipeId: recipe._id })">{{ recipe.title }}</a>
-            <span ng-click="delete(recipe._id)" class='glyphicon glyphicon-remove'></span>
-          </div>
-        </ul>
-      </div>
-      <div ui-view></div>
+<div class="col-md-8 col-md-offset-2" id='all'>
+  <div class="panel panel-default">
+    <div class="panel-heading" >
+      <h1 class="panel-title">{{ random.title }}</h1>
     </div>
+    <div class="panel-body flex-grow"><strong>Ingredients</strong><br/>{{ random.ingredients }}</div>
+    <hr>
+    <div class="panel-body flex-grow"><strong>Directions</strong><br/>{{ random.directions }}</div>
 </div>
+
+

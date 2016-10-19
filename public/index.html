@@ -14,7 +14,9 @@
         <div class="navbar-header">
           <a class='navbar-brand'>Save My Recipes</a>
         </div>
+
         <ul class="nav navbar-nav navbar-right">
+          <li ng-class="{active: isActive('/search')}" ><a ui-sref="search">What to Cook Tonight</a></li>
           <li ng-class="{active: isActive('/allrecipes')}" ><a ui-sref="allrecipes">My Recipes</a></li>
           <li ng-class="{active: isActive('/add')}" ><a ui-sref="add">Add Recipe</a></li>
         </ul>
@@ -25,6 +27,7 @@
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="search/search.js"></script>
     <script src="addNew/addNew.js"></script>
     <script src="recipes/recipes.js"></script>
     <script src="recipe/recipe.js"></script>

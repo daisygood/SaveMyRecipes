@@ -3,10 +3,13 @@ body {
   font-size: 16px;
 }
 
-.navbar {
+.navbar, .btn-info{
   background-color: #d75600 !important;
 }
 
+.btn-info{
+  border-color: #d75600 !important;
+}
 .navbar-brand {
   font-family: 'Eczar', serif;
   font-size: 30px;
@@ -34,6 +37,13 @@ body {
   font-size: 20px;
 }
 
-.glyphicon-remove {
+.glyphicon-remove, .custom-search-input {
   float: right;
+}
+
+#all{
+  margin-top: 20px;
+}
+.list-group nav{
+  overflow: scroll;
 }

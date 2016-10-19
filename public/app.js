@@ -3,6 +3,7 @@ var recipe = angular.module('Recipe', [
   'Recipe.addNew',
   'Recipe.recipes',
   'Recipe.recipe',
+  'Recipe.search',
   'ui.router'
 ]);
 
@@ -11,6 +12,11 @@ recipe.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/add');
 
   $stateProvider
+    .state('search', {
+      url:'/search',
+      templateUrl: 'Search/search.html',
+      controller: 'searchController'
+    })
     .state('add', {
       url: '/add',
       templateUrl: 'addNew/addNew.html',

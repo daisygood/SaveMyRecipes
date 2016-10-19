@@ -1,5 +1,6 @@
 var Recipe = require('./models/recipe');
 var request = require('request');
+var formidable = require('formidable');
 
 var handleGet = function (req, res) {
   Recipe.find({})
@@ -29,14 +30,13 @@ var handlePost = function (req, res) {
 };
 
 var handleDelete = function (req, res) {
-
   console.log(req.params.recipe_id);
   Recipe.remove({
     _id: req.params.recipe_id
   }).then(function (recipe) {
     res.send(201);
   })
-}
+};
 
 module.exports = function (app) {
   app.get('/api/recipes', handleGet);
